@@ -3,59 +3,245 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yancarlo (Yan) Guzman's personal website. Software development, projects, and a journey building for the web, one step at a time.">
+  <meta name="description" content="I'm Yan Guzman, a developer and problem solver working across the web, automation, and data. Explore my projects and follow along as I build in public.">
   <meta name="author" content="Yancarlo Guzman">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://yancarlo.com/">
-  <title>Yan Guzman — Developer &amp; Problem Solver</title>
-</head>
-<body>
-  <a href="#main-content">Skip to main content</a>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 
-  <header>
-    <p><a href="/">Yan Guzman</a></p>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- I give social shares their own headline and description. Otherwise, sites guess what to show. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yan Guzman">
+  <meta property="og:title" content="Yan Guzman — Developer & Problem Solver">
+  <meta property="og:description" content="Making complex ideas feel simple. Projects, practical problem-solving, and learning by building.">
+  <meta property="og:url" content="https://yancarlo.com/">
+  <meta property="og:image" content="https://yancarlo.com/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Yan Guzman — I make the complex feel simple.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>Yan Guzman — Developer &amp; Problem Solver</title>
+
+  <!-- Keeping files separate makes it easy to learn HTML, CSS, and JavaScript one layer at a time. -->
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+
+  <!-- This gives search engines a little structured context. It's data, not visible page content. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yancarlo Guzman",
+      "alternateName": "Yan Guzman",
+      "url": "https://yancarlo.com/",
+      "description": "Developer and problem solver interested in web development, automation, and data.",
+      "sameAs": ["https://github.com/qittco"]
+    }
+  </script>
+</head>
+<body id="top">
+  <!-- Keyboard users can skip the repeated navigation and go straight to the good stuff. -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" data-landmark="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Yan Guzman, back to top">
+        <span class="brand-mark" aria-hidden="true">y<span>.</span></span>
+        <span class="brand-name">Yan <span>Guzman</span></span>
+      </a>
+
+      <!-- These are ordinary links, so navigation works even when JavaScript is off. -->
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#building">The build</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hidden until JavaScript starts: I don't want a button that does nothing. -->
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme" hidden>
+        <span class="theme-symbol" data-theme-symbol aria-hidden="true">☾</span>
+        <span class="theme-toggle-text">Theme</span>
+      </button>
+    </div>
   </header>
 
-  <main id="main-content">
-    <section aria-labelledby="intro-heading">
-      <h1 id="intro-heading">Hey, I'm Yan.</h1>
-      <p>I like figuring out how things work, building useful tools, and finding simpler ways to solve complicated problems.</p>
-      <p>This is my little corner of the internet. I'm building it myself, starting with the basics and improving it as I go.</p>
-      <p><a href="#projects">See what I'm working on</a></p>
+  <main id="main-content" tabindex="-1" data-landmark="main">
+    <!-- I use one H1 for the big introduction, then H2s for the main sections. -->
+    <section class="hero section" aria-labelledby="intro-heading" data-landmark="section · introduction">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Developer by trade. Curious by default.</p>
+          <h1 id="intro-heading">Hey, I'm Yan<span class="period">.</span><br><span class="hero-statement">I make the complex <em>feel simple.</em></span></h1>
+          <p class="hero-description">I like figuring out how things work, building useful tools, and finding better ways to solve everyday problems.</p>
+          <p class="hero-description hero-description-secondary">This corner of the internet is part portfolio, part workbench, and part open notebook. I built it myself, and I'll show you how.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#building">See how this site works <span aria-hidden="true">↘</span></a>
+          </div>
+          <ul class="hero-credentials" aria-label="Areas of focus">
+            <li>Web development</li>
+            <li>Automation</li>
+            <li>Data</li>
+          </ul>
+        </div>
+
+        <!-- This little code card is regular text, not a big image that needs downloading. -->
+        <aside class="hero-visual" aria-label="My approach to solving a problem">
+          <div class="visual-topline"><span class="tiny-star" aria-hidden="true">✳</span> THE WAY I WORK <span class="visual-coordinate" aria-hidden="true">01 / 04</span></div>
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="visual-center" aria-hidden="true"><span>Y<span class="period">.</span></span></div>
+          <div class="code-card">
+            <div class="code-card-top"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>approach.js</span><span aria-hidden="true">⌘</span></div>
+            <pre><code><span class="code-purple">const</span> approach = [
+  <span class="code-lime">'listen'</span>,
+  <span class="code-lime">'simplify'</span>,
+  <span class="code-lime">'build'</span>,
+  <span class="code-lime">'improve'</span>
+];</code></pre>
+          </div>
+          <p class="visual-caption"><span class="caption-mark" aria-hidden="true">↳</span> Repeat until it's useful.</p>
+        </aside>
+      </div>
+      <div class="container">
+        <div class="hero-bottom"><span>GOOD IDEAS DESERVE THOUGHTFUL EXECUTION.</span><span class="hero-bottom-line" aria-hidden="true"></span><span>SCROLL TO EXPLORE ↓</span></div>
+      </div>
     </section>
 
-    <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-      <p>This is where I'll share things I've built, problems I've solved, and ideas I'm experimenting with. I'm putting everything together, so check back soon.</p>
-      <p>In the meantime, you can <a href="https://github.com/qittco">visit my GitHub</a>.</p>
+    <section class="section projects-section" id="projects" aria-labelledby="projects-heading" data-landmark="section · projects">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker"><span>01</span> / SELECTED WORK</p>
+            <h2 id="projects-heading">Things I've worked on<span class="period">.</span></h2>
+          </div>
+          <p>Small experiments, useful tools, and the kind of problems that are fun to untangle.</p>
+        </div>
+
+        <!-- Honest project cards beat placeholder links. I only link to work when I have a real page to show. -->
+        <div class="project-grid">
+          <article class="project-card project-card-featured">
+            <div class="project-art project-art-flow" aria-hidden="true">
+              <div class="flow-node"><span>INPUT</span><strong>Raw files</strong></div>
+              <div class="flow-connector"><span>↓</span></div>
+              <div class="flow-node flow-node-active"><span>PROCESS</span><strong>Python + checks</strong></div>
+              <div class="flow-connector"><span>↓</span></div>
+              <div class="flow-node"><span>OUTPUT</span><strong>Clear results</strong></div>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>01 / PROFESSIONAL EXPERIENCE</span><span class="project-tag">Automation</span></p>
+              <h3>Making repetitive work less repetitive.</h3>
+              <p>I've used Python and data validation to improve large reconciliation workflows and make complicated checks easier to manage.</p>
+              <p class="project-disclosure">Professional work · Internal code isn't public</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art project-art-data" aria-hidden="true">
+              <div class="data-window">
+                <div class="data-window-heading"><span>raw_data.csv</span><span>✳</span></div>
+                <div class="data-table"><span>NAME</span><span>DATE</span><span>STATUS</span><b>Yan</b><b>11/06</b><b class="data-pill">clean</b><b>Alex</b><b>11/07</b><b class="data-pill">clean</b><b>Sam</b><b>11/08</b><b class="data-pill">clean</b></div>
+              </div>
+              <span class="art-stamp">SORTED ✓</span>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>02 / PERSONAL PROJECT</span><span class="project-tag">Data tools</span></p>
+              <h3>Messy Data Cleaner</h3>
+              <p>Exploring how to turn inconsistent information into data that's easier to review, organize, and put to use.</p>
+              <p class="project-disclosure">Project details coming soon</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art project-art-form" aria-hidden="true">
+              <div class="form-mockup"><span class="form-mockup-title">Bank-out <span>↗</span></span><span class="form-mockup-line"></span><span class="form-mockup-line short"></span><span class="form-mockup-button">Review details <span>→</span></span></div>
+              <span class="form-cross" aria-hidden="true">+</span>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>03 / PERSONAL PROJECT</span><span class="project-tag">Web app</span></p>
+              <h3>Bank-Out Form</h3>
+              <p>A practical web project focused on clearer information entry and a more thoughtful experience for everyday tasks.</p>
+              <p class="project-disclosure">Project details coming soon</p>
+            </div>
+          </article>
+        </div>
+        <p class="projects-followup">Curious about the other experiments? <a class="inline-link" href="https://github.com/qittco" target="_blank" rel="noopener noreferrer">Explore my GitHub <span aria-hidden="true">↗</span></a></p>
+      </div>
     </section>
 
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">A little about me</h2>
-      <p>I'm Yancarlo, but you can call me Yan. I have a background in computer science and enjoy working at the intersection of technology, people, and practical problem-solving.</p>
-      <p>I'm especially interested in full stack development, automation, and data. I also enjoy learning new things just to see where they take me.</p>
+    <section class="section about-section" id="about" aria-labelledby="about-heading" data-landmark="section · about">
+      <div class="container about-grid">
+        <div class="about-heading">
+          <p class="section-kicker"><span>02</span> / THE PERSON BEHIND THE CODE</p>
+          <h2 id="about-heading">A little bit <em>about me.</em></h2>
+          <div class="about-doodle" aria-hidden="true"><span>think</span><span>→</span><span>make</span><span>↗</span></div>
+        </div>
+        <div class="about-content">
+          <p class="about-lead">I'm Yancarlo Guzman, but you can call me Yan. I have a B.S. in Computer Science, and I enjoy the space where technology meets actual human problems.</p>
+          <p>I work across front-end development, back-end concepts, automation, and data. Some of my favorite projects start with a simple question: <em>"Does this really need to be so complicated?"</em></p>
+          <p>I'm always learning, experimenting, and getting better at the craft. I care about how a thing works, but just as much about how it feels to use.</p>
+          <h3 class="subheading">A few tools I reach for</h3>
+          <ul class="skill-tags" aria-label="Technical interests and tools">
+            <li>HTML &amp; accessibility</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>SQL</li><li>Data analysis</li><li>Automation</li><li>Full-stack development</li><li>English &amp; Spanish</li>
+          </ul>
+          <div class="about-note"><span aria-hidden="true">✳</span><p>The goal isn't to make technology look complicated. It's to make good ideas easier for people to use.</p></div>
+        </div>
+      </div>
     </section>
 
-    <section id="building" aria-labelledby="building-heading">
-      <h2 id="building-heading">Building this site in public</h2>
-      <p>I'm making this website one step at a time. Right now, it's intentionally just HTML. Next I'll add CSS, then JavaScript, and eventually some more ambitious features.</p>
-      <p>Part of the fun is seeing how far a simple page can go.</p>
+    <section class="section building-section" id="building" aria-labelledby="building-heading" data-landmark="section · building in public">
+      <div class="container">
+        <div class="section-heading building-heading">
+          <div><p class="section-kicker"><span>03</span> / LEARNING IN PUBLIC</p><h2 id="building-heading">The website is part of the lesson<span class="period">.</span></h2></div>
+          <p>I'm documenting what I build so somebody else can open the files, follow along, and make their own thing.</p>
+        </div>
+        <div class="building-grid">
+          <div class="building-layers">
+            <article class="layer-card"><span class="layer-number">01 / THE STRUCTURE</span><div><h3>HTML <span aria-hidden="true">↗</span></h3><p>Give everything a purpose. Headings, links, sections, and useful content come first.</p></div><span class="layer-chip">Meaning</span></article>
+            <article class="layer-card"><span class="layer-number">02 / THE STYLE</span><div><h3>CSS <span aria-hidden="true">↗</span></h3><p>Make the same page feel intentional on a phone, a laptop, or anywhere in between.</p></div><span class="layer-chip">Expression</span></article>
+            <article class="layer-card"><span class="layer-number">03 / THE BEHAVIOR</span><div><h3>JavaScript <span aria-hidden="true">↗</span></h3><p>Add helpful interactions without making the page depend on them just to work.</p></div><span class="layer-chip">Interaction</span></article>
+          </div>
+          <div class="build-lab">
+            <div class="lab-heading"><span class="lab-dot" aria-hidden="true"></span><span>LIVE LEARNING LAB</span><span aria-hidden="true">↗</span></div>
+            <h3>Want to peek under the hood?</h3>
+            <p>This whole site uses semantic HTML. Turn on the outlines to see the major page sections. It's a simple way to visualize the structure your browser reads.</p>
+            <div class="lab-code"><div class="lab-code-heading"><span>index.html</span><span>HTML</span></div><pre><code><span class="lab-code-blue">&lt;main&gt;</span>
+  <span class="lab-code-blue">&lt;section</span> aria-labelledby="work-title"<span class="lab-code-blue">&gt;</span>
+    <span class="lab-code-blue">&lt;h2</span> id="work-title"<span class="lab-code-blue">&gt;</span>
+      Selected work
+    <span class="lab-code-blue">&lt;/h2&gt;</span>
+  <span class="lab-code-blue">&lt;/section&gt;</span>
+<span class="lab-code-blue">&lt;/main&gt;</span></code></pre></div>
+            <!-- This button becomes available only when script.js is running. -->
+            <button class="button button-lab" type="button" data-outline-toggle aria-pressed="false" hidden><span data-outline-label>Show semantic outlines</span> <span aria-hidden="true">✳</span></button>
+            <p class="lab-footnote">Bonus: try the theme button in the header. That's a little JavaScript, too.</p>
+          </div>
+        </div>
+        <p class="build-principle"><span aria-hidden="true">↳</span> No frameworks. No bloated dependencies. Just HTML, CSS, and JavaScript you can actually read.</p>
+      </div>
     </section>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Let's connect</h2>
-      <p>Have a project, question, or something interesting to share? You can find me on <a href="https://github.com/qittco">GitHub</a> for now. I'll add more ways to get in touch soon.</p>
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading" data-landmark="section · contact">
+      <div class="container contact-inner">
+        <p class="section-kicker"><span>04</span> / SAY HELLO</p>
+        <h2 id="contact-heading">Let's make something <em>worth using.</em></h2>
+        <div class="contact-bottom"><p>Have a project idea, a question, or just want to talk tech? Find me on GitHub. More ways to connect are on the way.</p><a class="button button-contact" href="https://github.com/qittco" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a></div>
+        <span class="contact-spark" aria-hidden="true">✳</span>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Yancarlo Guzman.</p>
+  <footer class="site-footer" data-landmark="footer">
+    <div class="container footer-inner">
+      <p><span class="footer-brand">y<span class="period">.</span></span> © <span data-year>2026</span> Yancarlo Guzman. Built by hand.</p>
+      <div class="footer-links"><a href="https://github.com/qittco" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div>
+    </div>
   </footer>
 </body>
 </html>
