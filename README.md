@@ -45,9 +45,9 @@ Don't have Python? In VS Code, you can use a local-server extension or another H
 
 ## A few things I will likely customize next
 
-- **Projects:** Replace the "details coming soon" descriptions with actual case studies and add links *only after those pages are ready on my older school acount*. Work-related code should stay private when necessary.
+- **Projects:** Replace the "details coming soon" descriptions with actual case studies and add links *only after those pages are ready on my older school acount*. Work-related code will NOT be posted in this portfolio and some of my own work will remain private when necessary.
 - **Contact:** Add a real email with my donain or professional profile once it's ready. I deliberately didn't invent a contact address or broken link as github is good enough for now.
-- **Social sharing:** The included `og-card.png` is a real social preview image. Swap it when you have a photo or design you like better, and keep its URL in the page metadata up to date.
+- **Social sharing:** The included `og-card.png` is a real social preview image. I will likely swap it down the road when I have a photo or design you like better, and keep its URL in the page metadata up to date.
 - **Content:** Keep the copy true to what I am doing, update the projects as they evolve, and add actual tutorial pages when they're written.
 
 ## The decisions behind the design
