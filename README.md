@@ -43,12 +43,12 @@ Don't have Python? In VS Code, you can use a local-server extension or another H
 
 **Heads-up:** The CSS and JavaScript files use relative paths, so they also work when previewed locally. The published site is configured for **`https://yancarlo.com/`** in its canonical URL, sitemap, and metadata. Update those if you publish on a different domain or repository subpath.
 
-## A few things I would customize next
+## A few things I will likely customize next
 
-- **Projects:** Replace the "details coming soon" descriptions with actual case studies and add links *only after those pages exist*. Work-related code should stay private when necessary.
-- **Contact:** Add a real email or professional profile once it's ready. I deliberately didn't invent a contact address or broken link.
+- **Projects:** Replace the "details coming soon" descriptions with actual case studies and add links *only after those pages are ready on my older school acount*. Work-related code should stay private when necessary.
+- **Contact:** Add a real email with my donain or professional profile once it's ready. I deliberately didn't invent a contact address or broken link as github is good enough for now.
 - **Social sharing:** The included `og-card.png` is a real social preview image. Swap it when you have a photo or design you like better, and keep its URL in the page metadata up to date.
-- **Content:** Keep the copy true to what you're doing, update the projects as they evolve, and add actual tutorial pages when they're written.
+- **Content:** Keep the copy true to what I am doing, update the projects as they evolve, and add actual tutorial pages when they're written.
 
 ## The decisions behind the design
 
@@ -63,8 +63,3 @@ I left comments throughout the HTML, CSS, and JavaScript. Some of the decisions 
 - **No fake project links:** It's better to say a case study is coming than to send somebody to a 404.
 - **No external fonts or libraries:** Fewer dependencies mean a fast, private, easier-to-maintain site.
 
-## Before hitting publish
-
-Read the copy once to make sure it still sounds like you. Then check the page at a narrow mobile width, use just your keyboard (Tab, Enter), zoom to 200%, and make sure every link goes somewhere real. You can also run Lighthouse or axe for an extra accessibility and performance check.
-
-The point isn't to memorize everything overnight. It's to build something real, understand why it works, and keep improving it. Have fun with it.
